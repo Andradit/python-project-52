@@ -33,30 +33,43 @@
       </ul>
     </div>
   </nav>
-
   <div class="container wrapper flex-grow-1">
 
+
     <h1 class="my-4">
+
+      Пользователи
+
     </h1>
-    <h1 class="my-4"></h1>
-    <div class="card">
-      <div class="card-body p-5 bg-light">
-        <div class="display-4">Привет от Хекслета!</div>
-        <p class="lead">Практические курсы по программированию</p>
-        <hr>
-        <a class="btn btn-primary btn-lg" href="https://ru.hexlet.io">Узнать больше</a>
-      </div>
-    </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Имя пользователя</th>
+          <th>Полное имя</th>
+          <th>Дата создания</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td>1</td>
+          <td>Fdr</td>
+          <td>Алексей Суп</td>
+          <td>12.05.2025 16:20</td>
+          <td>
+            <a href="/users/1/update/">Изменить</a>
+            <br>
+            <a href="/users/1/delete/">Удалить</a>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
 
   </div>
-
-<!--    &lt;!&ndash; Блок контента &ndash;&gt;-->
-<!--    <div>-->
-<!--      {% block content %}-->
-<!--      {% endblock %}-->
-<!--    </div>-->
-<!--    &lt;!&ndash; Конец блока контента &ndash;&gt;-->
-
   <footer>
     <div class="container my-5 pt-4 border-top">
       <a target="_blank" href="https://ru.hexlet.io">Hexlet</a>

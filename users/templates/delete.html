@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="ru-ru">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,42 +20,48 @@
           <a class="nav-link" href="/users/">Пользователи</a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link" href="/statuses/">Статусы</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/labels/">Метки</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/tasks/">Задачи</a>
+        </li>
+
       </ul>
       <ul class="navbar-nav">
 
-        <li class="nav-item">
-          <a class="nav-link" href="/login/">Вход</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/users/create/">Регистрация</a>
-        </li>
+        <form action="/logout/" method="post">
+          <input type="hidden" name="csrfmiddlewaretoken"
+                 value="BFBp9TZV4qrlqmMy179aXfxDM9riBkGOMOdFrY3b3kBZsbRhe5G6Zneoi6WRovF4">
+          <input class="btn nav-link" type="submit" value="Выход">
+        </form>
 
       </ul>
     </div>
   </nav>
 
+<!--  {% block content %}-->
   <div class="container wrapper flex-grow-1">
 
+
     <h1 class="my-4">
+
+      Удаление пользователя
+
     </h1>
-    <h1 class="my-4"></h1>
-    <div class="card">
-      <div class="card-body p-5 bg-light">
-        <div class="display-4">Привет от Хекслета!</div>
-        <p class="lead">Практические курсы по программированию</p>
-        <hr>
-        <a class="btn btn-primary btn-lg" href="https://ru.hexlet.io">Узнать больше</a>
-      </div>
-    </div>
+
+    <p>Вы уверены, что хотите удалить Андрей Д?</p>
+    <form method="post">
+      <input type="hidden" name="csrfmiddlewaretoken"
+             value="BFBp9TZV4qrlqmMy179aXfxDM9riBkGOMOdFrY3b3kBZsbRhe5G6Zneoi6WRovF4">
+      <input class="btn btn-danger" type="submit" value="Да, удалить">
+    </form>
 
   </div>
-
-<!--    &lt;!&ndash; Блок контента &ndash;&gt;-->
-<!--    <div>-->
-<!--      {% block content %}-->
-<!--      {% endblock %}-->
-<!--    </div>-->
-<!--    &lt;!&ndash; Конец блока контента &ndash;&gt;-->
+<!--  {% endblock %}-->
 
   <footer>
     <div class="container my-5 pt-4 border-top">

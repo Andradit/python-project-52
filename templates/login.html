@@ -34,28 +34,40 @@
     </div>
   </nav>
 
+<!--  {% block content %}-->
   <div class="container wrapper flex-grow-1">
 
+
     <h1 class="my-4">
+
+      Вход
+
     </h1>
-    <h1 class="my-4"></h1>
-    <div class="card">
-      <div class="card-body p-5 bg-light">
-        <div class="display-4">Привет от Хекслета!</div>
-        <p class="lead">Практические курсы по программированию</p>
-        <hr>
-        <a class="btn btn-primary btn-lg" href="https://ru.hexlet.io">Узнать больше</a>
+
+    <form method="post">
+      <input type="hidden" name="csrfmiddlewaretoken"
+             value="KnBxOijiOG7P0JOEb3ESksBFsgtVsCGpVwdN6nnyNAht2yTno1bOmAiqYdYufNFF">
+      <div class="mb-3"><label class="form-label" for="id_username">Имя пользователя</label><input type="text"
+                                                                                                   name="username"
+                                                                                                   autofocus
+                                                                                                   autocapitalize="none"
+                                                                                                   autocomplete="username"
+                                                                                                   maxlength="150"
+                                                                                                   class="form-control"
+                                                                                                   placeholder="Имя пользователя"
+                                                                                                   required
+                                                                                                   id="id_username">
       </div>
-    </div>
+      <div class="mb-3"><label class="form-label" for="id_password">Пароль</label><input type="password" name="password"
+                                                                                         autocomplete="current-password"
+                                                                                         class="form-control"
+                                                                                         placeholder="Пароль" required
+                                                                                         id="id_password"></div>
+      <input class="btn btn-primary" type="submit" value="Войти">
+    </form>
 
   </div>
-
-<!--    &lt;!&ndash; Блок контента &ndash;&gt;-->
-<!--    <div>-->
-<!--      {% block content %}-->
-<!--      {% endblock %}-->
-<!--    </div>-->
-<!--    &lt;!&ndash; Конец блока контента &ndash;&gt;-->
+<!--  {% endblock %}-->
 
   <footer>
     <div class="container my-5 pt-4 border-top">
